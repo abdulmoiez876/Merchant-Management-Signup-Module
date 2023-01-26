@@ -1,0 +1,89 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Register</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p>Already have an account? Login Here</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form (submit)="onSubmit(signupForm)" #signupForm="ngForm">
+        <mat-form-field appearance="outline">
+          <mat-icon matSuffix>person icon</mat-icon>
+          <mat-label>Full Name</mat-label>
+          <input
+          matInput
+          name="name"
+          ngModel
+          #nameinput="ngModel"
+          placeholder="Full Name"
+          type="text"
+          required
+          />
+          <mat-error>Please enter a valid name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-icon matSuffix>person icon</mat-icon>
+          <mat-label>Username</mat-label>
+          <input
+          matInput
+          name="username"
+          ngModel
+          #usernameinput="ngModel"
+          placeholder="Username"
+          type="text"
+          required />
+          <mat-error>Please enter a valid username</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-label>Email</mat-label>
+          <input
+          matInput
+          name="email"
+          ngModel
+          #emailinput="ngModel"
+          placeholder="Email"
+          type="email"
+          required />
+          <mat-error>Please enter a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-label>Phone No.</mat-label>
+          <input
+          matInput
+          name="phone"
+          ngModel
+          #phoneinput="ngModel"
+          placeholder="Phone No."
+          type="tel"
+          required />
+          <mat-error>Please enter a valid phone number</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-icon matSuffix>vpn_key</mat-icon>
+          <mat-label>Password</mat-label>
+          <input
+          matInput
+          name="password"
+          ngModel
+          #passwordinput="ngModel"
+          placeholder="Password"
+          type="password"
+          required />
+          <mat-error>Please enter a valid password</mat-error>
+        </mat-form-field>
+
+        <button class="sign-up-button" mat-raised-button color="primary" type="submit">Sign Up</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

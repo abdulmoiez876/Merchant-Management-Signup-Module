@@ -1,8 +1,8 @@
 <div class="container">
   <mat-progress-spinner *ngIf="isLoading" class="spinner" mode="indeterminate" value=40></mat-progress-spinner>
   
+  <h1 class="message slide-fwd-center" *ngIf="responseMessage.length>0">{{ responseMessage }}</h1>
   <mat-card>
-    <h1 class="message">{{ responseMessage }}</h1>
 
     <mat-card-header>
       <mat-card-title>

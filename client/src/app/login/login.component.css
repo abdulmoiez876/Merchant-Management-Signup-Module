@@ -47,3 +47,45 @@ mat-form-field {
   position: fixed;
   backdrop-filter: blur(10px);
 }
+
+.message {
+  background-color: #3f51b5;
+  position: absolute;
+  color: white;
+  padding: 16px;
+  border-radius: 6px;
+  top: 10%;
+  width: 25vw;
+  text-align: center;
+  left: 36.5%;
+  z-index: 100;
+}
+
+.slide-fwd-center {
+  -webkit-animation: slide-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}

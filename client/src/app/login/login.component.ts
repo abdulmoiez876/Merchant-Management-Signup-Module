@@ -37,10 +37,16 @@ export class LoginComponent implements OnInit {
         mobileNumber: this.mobileNumber,
         password: this.password
       }).subscribe(res => {
-        alert("User Created Successfully!");
+        this.responseMessage = "User Created Successfully";
+        setTimeout(() => {
+          this.responseMessage = '';
+        }, 2000)
         this.isLoading = false;
       }, err => {
-        alert(err.error.message);
+        this.responseMessage = err.error.message;
+        setTimeout(() => {
+          this.responseMessage = '';
+        }, 2000)
         this.isLoading = false;
       })
     }

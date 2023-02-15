@@ -19,7 +19,7 @@
           <mat-icon matSuffix>person icon</mat-icon>
           <mat-label>Full Name</mat-label>
           <input [(ngModel)]='name' matInput name="name" ngModel #nameinput="ngModel" placeholder="Full Name"
-            type="text" required />
+            type="text" minlength="1" maxlength="25" required />
           <mat-error>Please enter a valid name</mat-error>
         </mat-form-field>
 
@@ -27,7 +27,7 @@
           <mat-icon matSuffix>person icon</mat-icon>
           <mat-label>Username</mat-label>
           <input matInput name="username" [(ngModel)]='username' #usernameinput="ngModel" placeholder="Username"
-            type="text" required />
+            type="text" minlength="1" maxlength="15" required />
           <mat-error>Please enter a valid username</mat-error>
         </mat-form-field>
 
@@ -35,7 +35,7 @@
           <mat-icon matSuffix>email</mat-icon>
           <mat-label>Email</mat-label>
           <input matInput name="email" [(ngModel)]='email' #emailinput="ngModel" placeholder="Email" type="email"
-            required />
+            required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" />
           <mat-error>Please enter a valid email</mat-error>
         </mat-form-field>
 
@@ -43,7 +43,7 @@
           <mat-icon matSuffix>phone</mat-icon>
           <mat-label>Phone No.</mat-label>
           <input matInput name="phone" [(ngModel)]='mobileNumber' #phoneinput="ngModel" placeholder="Phone No."
-            type="tel" required />
+            type="tel" pattern="^03[0-9]{9}$" required />
           <mat-error>Please enter a valid phone number</mat-error>
         </mat-form-field>
 
